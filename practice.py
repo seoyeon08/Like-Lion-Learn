@@ -1,10 +1,8 @@
-def main():
-  x = input()
-  y = input()
-  
-  if(x>0 and y>0) :
-    print("1")
-  elif(x>0 and y<0) :
-    print("2")
-  elif(x<0 and y>0 ) :
-    print("")
+a = int(input())
+b = int(input())
+c = int(input())
+
+result = list(str(a*b*c))
+
+for i in range(10):
+  print(result.count(str(i)))
