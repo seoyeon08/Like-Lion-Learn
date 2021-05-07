@@ -1,8 +1,16 @@
-a = int(input())
-b = int(input())
-c = int(input())
+n = int(input())
+score = list(map(float, input().split()))
+max = 0
+sum = 0
 
-result = list(str(a*b*c))
+for i in range(n) :
+  if max < score[i] :
+    max = score[i]
 
-for i in range(10):
-  print(result.count(str(i)))
+for i in range(n) :
+  score[i] = (score[i] / max) * 100
+
+for i in range(n) :
+  sum += score[i]
+
+print(sum/n)
